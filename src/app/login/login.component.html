@@ -1,0 +1,40 @@
+
+<div  *ngIf="!user" class="card text-center" style="  width: 20rem;
+margin: 15rem auto ;">
+    <div class="card-header"><h1>Google Login</h1></div>
+    <div class="card-body">
+      <p class="card-text"> Sign in with      </p>
+      <a href="#" class="btn btn-gplus " (click)="signInWithGoogle()"  style="color: red;"><i class="fa fa-google-plus left"></i> Google +</a>
+
+    </div>
+  </div>
+  <!-- ---------------------------- -->
+  <div class="row container">
+  <div class="card text-center col-md-8">
+    <div class="card-header"><h6>Google Login</h6></div>
+    <div class="card-body">
+      <img [src]="user.photoUrl" class="img-fluid rounded-circle ">
+      <h5 class="card-title">{{user.name}}</h5>
+      <p class="card-text">{{user.email}}</p>
+      <a href="#" class="btn btn-gplus" (click)="signOut()">SignOut</a>
+    </div>
+   
+  </div>
+
+  <div class="col-md-4">
+    <h4>User Details</h4>
+   
+    User Gender : {{user_url['gender']}} <br>
+
+    User email :  : {{user_url['email']}} <br> 
+
+     User Birth Date : {{user_url['dob']['date']}}   <br>
+
+
+     User Age:{{user_url['dob']['age']}}  <br>
+
+     User Phone:{{user_url['phone']}}   <br>
+
+  </div>
+
+</div>

@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'socail-gmail-login'`, () => {
+  it(`should have as title 'gmail-login'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('socail-gmail-login');
+    expect(app.title).toEqual('gmail-login');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('socail-gmail-login app is running!');
+    expect(compiled.querySelector('.content span').textContent).toContain('gmail-login app is running!');
   });
 });
